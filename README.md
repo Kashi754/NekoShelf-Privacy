@@ -46,10 +46,12 @@ NekoShelf allows you to manually export your library to a local `.json` backup f
 When you search for manga, scan an ISBN barcode, or view series details, the app makes direct HTTPS requests from your device to the following public APIs:
 
 1. **MangaDex API (`https://api.mangadex.org` / `https://uploads.mangadex.org`)** — Used to search series metadata, descriptions, genre tags, community ratings, volume numbers, and cover art.
-2. **English Wikipedia MediaWiki API (`https://en.wikipedia.org/w/api.php`)** — Used to look up English print volume release dates and ISBN records (content licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)).
-3. **Apple Books / iTunes Search API (`https://itunes.apple.com/search`)** — Used to look up US English edition publication dates.
-4. **OpenLibrary Books API (`https://openlibrary.org/api/books`)** — Used to resolve scanned book ISBN barcodes to series titles and volume numbers.
-5. **Google Books API (`https://www.googleapis.com/books/v1/volumes`)** — Used as a fallback to resolve scanned book ISBN barcodes to series titles and volume numbers.
+2. **Anime News Network Encyclopedia API (`https://cdn.animenewsnetwork.com/encyclopedia/api.xml`)** — Used to look up authoritative tankoubon volume counts, North American English release dates, ISBNs, and supplementary series summaries and cover art.
+3. **Penguin Random House (`https://images.randomhouse.com`)** — Used to retrieve English edition cover art for PRH-distributed publishers (including Seven Seas Entertainment and Kodansha) by ISBN.
+4. **English Wikipedia MediaWiki API (`https://en.wikipedia.org/w/api.php`)** — Used to look up English print volume release dates and ISBN records (content licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)).
+5. **Apple Books / iTunes Search API (`https://itunes.apple.com/search`)** — Used to look up US English edition publication dates and English volume cover art.
+6. **OpenLibrary Books API (`https://openlibrary.org/api/books`)** — Used to resolve scanned book ISBN barcodes to series titles and volume numbers (CC0 bibliographic data).
+7. **Google Books API (`https://www.googleapis.com/books/v1/volumes`)** — Used as a fallback to resolve scanned book ISBN barcodes to series titles and volume numbers.
 
 Standard network request metadata (such as your IP address and the search query or ISBN being looked up) is received by those third-party services in order to fulfill the request, subject to their respective privacy policies.
 
